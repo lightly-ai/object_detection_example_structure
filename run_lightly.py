@@ -34,6 +34,7 @@ client.schedule_compute_worker_run(
         'enable_corruptness_check': True,
         'remove_exact_duplicates': True,
         'enable_training': True,
+        "relevant_filenames_file": ".lightly/relevant_filenames.txt",
     },
     selection_config={
         "n_samples": 10,
