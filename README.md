@@ -2,6 +2,7 @@
 
 This is an example of folder structure in the Lightly format for data selection using data from the [DeepSportRadar Instance Segmentation Challenge](https://github.com/DeepSportRadar/instance-segmentation-challenge)!
 Predictions are computed on the union of val and test sets using a detectron2 mask_rcnn_R_50_FPN_3x model finetuned on the train set. Metadata are created with the name of the folders in which images are contained. KS-FR-ROANNE folder is removed using our [relevant filenames feature](https://docs.lightly.ai/docs/relevant-filenames).
+In this example you will find an implementation using [AWS S3](https://docs.lightly.ai/docs/aws-s3). Lightly also supports working with [Azure](https://docs.lightly.ai/docs/azure) and with [Google Cloud Storage](https://docs.lightly.ai/docs/google-cloud-storage). You need to adjust some code accordingly to the docs in order to use these other providers, but the folder structure remains the same.
 
 #### How to run the selection
 
