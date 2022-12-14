@@ -1,0 +1,14 @@
+[
+    {
+        "name": "court",
+        "path": "court",
+        "defaultValue": "undefined",
+        "valueDataType": "CATEGORICAL_STRING"
+    },
+    {
+        "name": "game_id",
+        "path": "game_id",
+        "defaultValue": "undefined",
+        "valueDataType": "CATEGORICAL_STRING"
+    }
+]
