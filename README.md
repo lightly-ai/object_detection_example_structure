@@ -44,13 +44,16 @@ In order to run the selection (on valtest set) you have first to upload data to 
 
 ```
 aws s3 cp input_bucket s3://yourInputBucket/sportradar_input/ --recursive
-aws s3 cp lightly_bucket s3://yourInputBucket/sportradar_lightly/ --recursive
+aws s3 cp lightly_bucket s3://yourLightlyBucket/sportradar_lightly/ --recursive
 ```
 
-Then simply run the worker with your API token and your worker id:
+If you already [installed Lightly](https://docs.lightly.ai/docs/install-lightly), run the worker with your API token and your worker id:
 
 ```
-bash start_lightly_worker.sh
+docker run --shm-size="1024m" --gpus all --rm -it \
+    -e LIGHTLY_TOKEN={MY_LIGHTLY_TOKEN} \
+    lightly/worker:latest \
+    worker.worker_id={MY_WORKER_ID}
 ```
 
 And finally run your Python scheduling script with:
